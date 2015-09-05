@@ -1,0 +1,22 @@
+{
+    "name":"LavaWong-learn",
+    "version":"0.0.1",
+    "author":[{
+        "name":"lavawong",
+        "email":"lazy.false@gmail.com"
+    }],
+    "description":"Language learning",
+    "repository":{
+        "type":"git",
+        "url":"https://github.com/qiangyee/learn.git"
+    },
+    "dependencies":{
+		"gulp" : "^3.9.0",
+        "gulp-less"  : "^3.0.3",
+		"gulp-concat" : "*",
+		"gulp-uglify" : "*",
+		"gulp-imagemin" : "*",
+		"gulp-sourcemaps" : "*",
+		"del" : "*"
+    }
+}

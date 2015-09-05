@@ -1,0 +1,52 @@
+@charset "utf-8";
+@import "reset";
+@import "common";
+
+.box-raduis(@style) {
+  -wekit-border-radius : @style;
+    -moz-border-radius : @style;
+     -ms-border-radius : @style;
+      -o-border-radius : @style;
+         border-radius : @style;
+}
+
+.annotation-font(@fontSize, @textAlign, @fontStyle) {
+    font-size: @fontSize;
+    text-align: @textAlign;
+    font-style: @fontStyle
+}
+
+.box {
+    .box-raduis(5px);
+    margin: 0.5em 0;
+    padding: 1em;
+    border: 2px solid #373737;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.clearfix {
+    display: block;
+    zoom: 1;
+
+    &:after {
+        content: " ";
+        display: block;
+        font-size: 0;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+.float-left {
+    float: left;
+    margin: 0.5em 0.5em 0.5em 0;
+    background-color: #ccc;
+    .annotation {
+        margin-top: 0.5em;
+        .annotation-font(0.75em, center, italic);
+    }
+}

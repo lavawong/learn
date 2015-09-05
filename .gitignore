@@ -1,0 +1,6 @@
+*release*
+*.bak
+*\~
+.DS_Store
+.idea
+node_modules
