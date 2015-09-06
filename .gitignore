@@ -1,3 +1,5 @@
+/highlight/LICENSE
+/highlight/*.md
 *release*
 *.bak
 *\~
@@ -5,3 +7,4 @@
 .idea
 node_modules
 *.iml
+*.swp
