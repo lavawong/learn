@@ -26,7 +26,7 @@ gulp.task('less', function () {
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
-    .pipe(gulp.dest('./release/less'));
+    .pipe(gulp.dest('./release'));
 });
 
 //gulp.task('scripts', ['clean'], function() {
@@ -54,9 +54,22 @@ gulp.task('watch', function() {
   gulp.watch(paths.less, ['less']);
   //gulp.watch(paths.images, ['images']);
 });
- 
+
+// Copy web font to release folder
+gulp.task('copy-font', function() {
+  return gulp.src([
+        'css/font/**/*.eot',
+        'css/font/**/*.svg',
+        'css/font/**/*.ttf',
+        'css/font/**/*.woff*'
+      ], {
+        base: 'css/font'
+      })
+      .pipe(gulp.dest('release/font'));
+});
+
 // The default task (called when you run `gulp` from cli) 
-gulp.task('default', ['watch', 'less']);
+gulp.task('default', ['less', 'copy-font']);
 
 
 
