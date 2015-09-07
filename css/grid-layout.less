@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/*去掉所有元素的内边距和外边距*/
+* {margin:0; padding:0;}
+
+.font(@fontSize, @lineHeight){
+  /*设定字体大小*/
+  font-size:@fontSize;
+  /*将行高设定为等于网格高*/
+  line-height:@lineHeight;
+  text-indent: 2rem;
+}
+body {
+  /*添加网格背景*/
+  background-image:url(../images/grid_18px@2x.png);
+  /*设定字体*/
+  font:100% helvetica, arial, sans-serif;
+  /*加宽左右外边距，得到一栏的雏形*/
+  margin:0 40px 0;
+}
+h1 {
+  .font(50px, 72px);
+  margin-bottom: 2px;
+}
+
+h3 {
+  .font(18px, 36px);
+  margin-top:-2px;
+  margin-bottom:2px;
+}
+
+p {
+  .font(18px, 36px);
+}
+
+
+.wrapper {
+  padding-top: 40px;
+}
