@@ -6,13 +6,15 @@
 }
 
 body {
-    font: 18px/1.5 "CrimsonRoman", georgia, times, serif;
-    margin:20px 5rem 0;
+    font: 1.0rem/1.5 "CrimsonRoman", georgia, times, serif;
+    margin:3rem 5rem 0;
     background-color:#fff;
 }
 
-h1 {
-
+h1+p::first-letter {
+    font-size: 4rem;
+    line-height: 3rem;
+    float:left;
 }
 
 h2 {
@@ -23,4 +25,14 @@ h2 {
     font-variant:small-caps;
     word-spacing:.5em;
     letter-spacing:.6em;
+}
+
+p {
+    line-height: 1.75rem;
+}
+
+blockquote {
+    //margin-left: 10%;
+    padding-left: 2rem;
+    border-left: .25rem solid #00cc11;
 }
