@@ -1,0 +1,79 @@
+@import "../common";
+
+@siteWidth: 1000px;
+
+@navWidth: 200px;
+
+@articleWidth: 600px;
+@asideWidth: 200px;
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.wrapper {
+    padding: 0px;
+    margin: 0 auto;
+    width: @siteWidth;
+}
+//https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+
+.wrapper > * {
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+.wrapper > * *, .wrapper > * *:before, .wrapper > * *:after {
+    box-sizing: inherit;
+}
+
+.wrapper img {
+    max-width: 100%;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    li {
+        padding: 0px;
+    }
+}
+
+.padding() {
+    padding: 16px 20px;
+}
+
+header {
+    text-align: center;
+    background-color: #cc0000;
+}
+
+nav {
+    float: left;
+    width: @asideWidth;
+    background-color: #00cc00;
+    .padding();
+}
+
+article {
+    float: left;
+    width: @articleWidth;
+    background-color: #cccc00;
+    .padding();
+}
+
+aside {
+    float: left;
+    width: @asideWidth;
+    background-color: #00cccc;
+    .padding();
+}
+
+footer {
+    clear: both;
+    color: #fff;
+    text-align: center;
+    padding: 16px 20px;
+    background-color: #000;
+}

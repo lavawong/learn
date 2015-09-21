@@ -1,0 +1,52 @@
+@import "../common";
+@paddingLeft: 10px;
+@navWidth: 150px-2*@paddingLeft;
+@asideWidth: 200px-2*@paddingLeft;
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    li {
+        padding: 0px;
+    }
+}
+
+.main-wrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+    min-width: 640px;
+    header {
+        text-align: center;
+        background-color: #cc0000;
+    }
+    nav {
+        display: table-cell;
+        width: 170px;
+        background-color: #00cc00;
+        padding: @paddingLeft;
+    }
+    article {
+        display: table-cell;
+        background-color: #cccc00;
+        padding: @paddingLeft;
+    }
+    aside {
+        display: table-cell;
+        width: 210px;
+        background-color: #00cccc;
+        padding: @paddingLeft;
+    }
+}
+
+footer {
+    clear: both;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+}

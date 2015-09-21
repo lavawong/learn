@@ -1,0 +1,67 @@
+@import "../common";
+@siteWidth: 1000px;
+
+@navPaddingLeft: 20px;
+@navWidth: 200px - 2*@navPaddingLeft;
+
+@articlePaddingLeft: 20px;
+@articleWidth: 600px - 2*@articlePaddingLeft;
+
+@asidePaddingLeft: 20px;
+@asideWidth: 200px - 2*@asidePaddingLeft;
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.wrapper {
+    padding: 0px;
+    margin: 0 auto;
+    width: @siteWidth;
+    word-wrap: break-word;
+}
+
+.wrapper img {
+    max-width: 100%;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    li {
+        padding: 0px;
+    }
+}
+
+header {
+    background-color: #cc0000;
+}
+
+nav {
+    float: left;
+    width: @asideWidth;
+    padding: 16px @navPaddingLeft;
+    background-color: #00cc00;
+}
+
+article {
+    float: left;
+    padding: 16px @articlePaddingLeft;
+    width: @articleWidth;
+    background-color: #cccc00;
+}
+
+aside {
+    float: left;
+    padding: 16px @asidePaddingLeft;
+    width: @asideWidth;
+    background-color: #00cccc;
+}
+
+footer {
+    clear: both;
+    color: #fff;
+    background-color: #000;
+}
