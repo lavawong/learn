@@ -40,15 +40,28 @@ h5 {
 .wrapper {
     margin: 2em auto;
     max-width: 1000px;
+    ul, li {
+        list-style: none;
+    }
 }
 
 
-.box-raduis(@style) {
+
+
+.box-radius(@style) {
     -wekit-border-radius : @style;
     -moz-border-radius : @style;
     -ms-border-radius : @style;
     -o-border-radius : @style;
     border-radius : @style;
+}
+
+.box-shadow(@style) {
+    -wekit-box-shadow : @style;
+    -moz-box-shadow : @style;
+    -ms-box-shadow : @style;
+    -o-box-shadow : @style;
+    box-shadow : @style;
 }
 
 .annotation-font(@fontSize, @textAlign, @fontStyle) {
@@ -58,7 +71,7 @@ h5 {
 }
 
 .box {
-    .box-raduis(5px);
+    .box-radius(5px);
     margin: 0.5em 0;
     padding: 1em;
     border: 2px solid #373737;
