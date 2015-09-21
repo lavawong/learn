@@ -1,0 +1,163 @@
+@import "../common";
+
+@borderColor: #f00;
+
+.card {
+    min-width: 500px;
+    margin: 20px;
+    background-color: rgba(248, 248, 248, 0.9);
+    border: 2px solid rgba(204, 204, 204, 0.7);
+    padding: 30px;
+    .box-radius(5px);
+    .box-shadow(10px 10px 5px rgba(0, 0, 0, 0.91));
+    min-height: 100px;
+}
+
+.list1 {
+    margin: 50px; width: 150px;
+    ul {
+        .box-radius(3px);
+        border: 1px solid @borderColor;
+        padding: 5px 10px 3px;
+    }
+    li {
+        list-style: none;
+        a {
+            text-decoration: none;
+            font: 20px Exo, helvetica, arial, sans-serif;
+            font-weight: 400;
+            color: #000;
+            //background:#ffed53;
+            padding: 3px 10px;
+            display: block;
+            &:hover {
+                color: #069;
+            }
+        }
+    }
+    li + li {
+        border-top: 1px solid @borderColor;
+    }
+
+}
+
+.list2 {
+    width: 100%;
+    ul {
+        .box-radius(3px);
+        padding: 5px 10px 3px;
+    }
+    li {
+        list-style: none;
+        float: left;
+        a {
+            text-decoration: none;
+            font: 20px Exo, helvetica, arial, sans-serif;
+            font-weight: 400;
+            //background:#ffed53;
+            color: #838383;
+            padding: 3px 10px;
+            display: block;
+            &:hover {
+                color: #373737;
+            }
+        }
+    }
+    li + li {
+        border-left: 1px solid #ccc;
+    }
+}
+
+.multi-drop-menu {
+    text-align: center;
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    ul {
+        float: left;
+        padding: 5px 10px 3px;
+        .box-radius(3px);
+    }
+    li {
+        list-style: none;
+        float: left;
+        position: relative;
+        background-color: #eee;
+        a {
+            text-decoration: none;
+            font: 20px Exo, helvetica, arial, sans-serif;
+            color: #373737;
+            padding: 3px 10px;
+            display: block;
+            border-right: 2px solid #1E60AC;
+            //background-clip: padding-box;
+            &:hover {
+                background: #595959;
+                color: rgba(149, 150, 149, 0.91);
+            }
+            &:active {
+                background: #323232;
+                color: #efefef;
+            }
+
+        }
+        li {
+            float: none;
+            a {
+                border-right-style: none;
+                border-top-style: solid;
+            }
+            ul {
+                width: 12em;
+                display: none;
+                position: absolute;
+                left: 100%;
+                top: 0;
+            }
+        }
+
+        ul {
+            display: none;
+            width: 10em;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            padding: 0px;
+        }
+        &:last-child a {
+            border-right: none;
+        }
+        &:hover > ul {
+            display: block;
+        }
+        &:hover > a {
+            background: #595959;
+            color: rgba(149, 150, 149, 0.91);
+        }
+    }
+}
+
+.multi-drop-menu.vertical {
+    width: 8em;
+    li {
+        a {
+            border-right-style: none;
+            border-top-style: solid;
+        }
+        li {
+            a {
+                border-left-style: solid;
+            }
+        }
+        ul {
+            left: 100%;
+            top: 0;
+        }
+    }
+    ul, li {
+        float: none;
+    }
+
+}
