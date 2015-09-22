@@ -60,6 +60,14 @@ h5 {
     -o-box-shadow : @style;
     box-shadow : @style;
 }
+//background 0.15s ease, color 0.15s ease
+.transition(@style) {
+    -webkit-transition: @style;
+    -moz-box-shadow : @style;
+    -ms-box-shadow : @style;
+    -o-box-shadow : @style;
+    box-shadow : @style;
+}
 
 .annotation-font(@fontSize, @textAlign, @fontStyle) {
     font-size: @fontSize;

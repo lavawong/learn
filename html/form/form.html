@@ -9,10 +9,10 @@
 <body>
     <div class="wrapper">
         <!-- 必要的form标签 -->
-        <form class="stylin_form1" action="process_form.php" method="post">
+        <form class="stylin-form1 label-left" action="form.html" method="post">
             <h3>A Stylin' Form</h3>
             <!-- 控件组，即各种控件的容器 -->
-            <fieldset>
+            <fieldset class="part1">
                 <!-- 控件组的文字说明，或标题 -->
                 <legend><span>Part 1 &#8226; Basic Controls</span></legend>
                 <!-- 开始单行文本输入控件 -->
@@ -22,14 +22,14 @@
                     <label for="user_name">User Name<span> *</span></label>
                     <!-- text属性让这个控件可以输入文本 -->
                     <input type="text" id="user_name" name="user_name" />
-                    <p>Please select a user name</p>
+                    <p class="error">Please select a user name</p>
                 </section>
                 <!-- 开始密码控件 -->
                 <section>
                     <label for="password">Password<span> *</span></label>
                     <!-- 密码文本显示为掩码 -->
                     <input type="password" id="password" name="password" maxlength="20" />
-                    <p>Password must be 8 or more characters</p>
+                    <p class="error">Password must be 8 or more characters</p>
                 </section>
                 <!-- 开始多行文本输入控件 -->
                 <section>
@@ -43,7 +43,7 @@
                     <input type="date" id="special_date" name="event_date" min="2012-09-05" />
                 </section>
             </fieldset>
-            <fieldset>
+            <fieldset class="part2">
                 <legend><span>Part 2 &#8226; Multiple-Choice Controls</span></legend>
                 <!-- 开始复选框 -->
                 <section>
@@ -60,7 +60,7 @@
                         <input type="checkbox"  id="check3" name="checkset" value="3" />
                         <label for="check3">Choice 3&mdash;add as many as you need!</label>
                     </section>
-                    <p>You must choose one or more</p>
+                    <p class="error">You must choose one or more</p>
                 </section>
                 <!-- 开始单选按钮 -->
                 <section>

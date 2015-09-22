@@ -1,11 +1,11 @@
 @import "../common";
 
-@noteColor:#cc0000;
+@noteColor: #cc0000;
 
 .wrapper {
-    margin: 0 auto;
+    margin: 0 auto 4rem;
     max-width: 1000px;
-    min-width: 640px;
+    min-width: 300px;
     h3 {
         color: #B0B9B2;
     }
@@ -14,9 +14,10 @@
 .vertical-top {
     vertical-align: top;
 }
-.stylin_form1 {
+
+.stylin-form1 {
     legend {
-        width:100%;
+        width: 100%;
         background: #B7C4B5;
         display: block;
         color: #FEFEFE;
@@ -27,39 +28,149 @@
         & + fieldset {
             margin-top: 20px;
         }
-    }
-    section {
-        line-height: 1.75;
-        border-bottom: 5px solid #EBECE6;
-        margin-top: 10px;
-        .note {
-            font-size: .45rem;
-            color: @noteColor;
-        }
-        p {
-            font-size: .75rem;
-        }
-        label {
-            font-weight: bold;
-            width: 20rem;
-            display: block;
-            span {
+        section {
+            line-height: 1.75;
+            border-bottom: 5px solid #EBECE6;
+            margin-top: 10px;
+            padding: .5rem 0 .5rem 0;
+            &:last-child {
+                border-bottom: none;
+            }
+            section {
+                border-bottom:none;
+                zoom: 1;
+                margin-top: 0;
+                input {
+                    float: left;
+                    clear: both;
+                    margin: .41rem .5rem 0;
+                }
+                label {
+                    float: left;
+                    clear: none;
+                }
+                &:after {
+                    clear: none;
+                }
+            }
+            .note {
+                font-size: .75rem;
                 color: @noteColor;
             }
+
+            label, h4 {
+                font-size: 1rem;
+                font-weight: bold;
+                width: 20rem;
+                display: block;
+                span {
+                    color: @noteColor;
+                }
+            }
+            input, select {
+                .box-radius(3px);
+                .box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+                font-size: 1rem;
+                border: 1px solid #c5c8c6;
+                padding: 3px 12px;
+                outline: none;
+            }
+            textarea {
+                .box-radius(3px);
+                .box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+                min-width: 30rem;
+                min-height: 10rem;
+                font-size: 1rem;
+                border: 1px solid #c5c8c6;
+                padding: 3px 12px;
+                outline: none;
+                font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+            }
+            &:after {
+                clear: both;
+                content: ' ';
+                height: 0;
+                overflow: hidden;
+                visibility: hidden;
+                font-size: 0;
+                display: block;
+            }
         }
+
+        p {
+            font-size: .75rem;
+            clear: both;
+            margin-left: .5rem;
+            &.error {
+                color:#c00;
+            }
+        }
+    }
+    input[type="submit"] {
+        width:auto; /* 覆盖为其他字段设定的宽度 */
+        margin:.4rem .3rem 0 0;
+        font-size:1rem;
+        font-weight:800;
+        color:#fff;
+        background-color:#bbb7ae;
+        cursor:pointer; /*在鼠标位于按钮之上时，把光标变成小手形状*/
+        padding: .3rem;
+        border: none;
+        outline: none;
+        .box-radius(3px);
+        .transition(background 0.15s ease, color 0.15s ease;);
+        &:hover {
+            background-color: #0087de;
+            .box-shadow(0 1px 0 rgba(255,255,255,0.3) inset);
+        }
+    }
+    & > section:last-child {
+        text-align: center;
         input {
-            .box-radius(3px);
-            .box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
-            font-size: 1rem;
-            border: 1px solid #c5c8c6;
-            padding: 3px 12px;
+            float: none !important;
         }
-        textarea {
-            .box-radius(3px);
-            .box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
-            font-size: 1rem;
-            border: 1px solid #c5c8c6;
-            padding: 3px 12px;
+    }
+
+    &.label-left {
+        //width: 22rem;
+
+        section {
+            label, h4 {
+                float: left;
+                width: 8rem;
+                //margin-top: 10px;
+            }
+            input, textarea, select {
+                float: left;
+                width: 12rem;
+            }
+            p {
+                margin-left: 8rem;
+                &.note {
+                    margin-left: 0rem;
+                }
+            }
+            section {
+                border-bottom:none;
+                margin-left:8em;
+                padding-top:0;
+                //这里为什么需要加overflow:hidden;
+                //下边 才能使选项框上移
+                //overflow: hidden;
+                input {
+                    width: 1rem;
+                    clear: none;
+                }
+
+                label {
+                    float: none;
+                    width: auto;
+                    //上边设置为display:block;这里需要重置
+                    display: inline;
+                }
+
+            }
+
         }
     }
 }
