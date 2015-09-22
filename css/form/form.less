@@ -11,6 +11,9 @@
     }
 }
 
+.vertical-top {
+    vertical-align: top;
+}
 .stylin_form1 {
     legend {
         width:100%;
@@ -26,8 +29,9 @@
         }
     }
     section {
-        line-height: 1.75rem;
+        line-height: 1.75;
         border-bottom: 5px solid #EBECE6;
+        margin-top: 10px;
         .note {
             font-size: .45rem;
             color: @noteColor;
@@ -35,14 +39,27 @@
         p {
             font-size: .75rem;
         }
-        label span {
-            color: @noteColor;
+        label {
+            font-weight: bold;
+            width: 20rem;
+            display: block;
+            span {
+                color: @noteColor;
+            }
         }
         input {
             .box-radius(3px);
             .box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
-            line-height: 1.25rem;
+            font-size: 1rem;
             border: 1px solid #c5c8c6;
+            padding: 3px 12px;
+        }
+        textarea {
+            .box-radius(3px);
+            .box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+            font-size: 1rem;
+            border: 1px solid #c5c8c6;
+            padding: 3px 12px;
         }
     }
 }
