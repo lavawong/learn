@@ -1,0 +1,97 @@
+@import "../common";
+
+.wrapper {
+    margin: 0 auto 4rem;
+    max-width: 1000px;
+    min-width: 300px;
+}
+
+figure {
+
+    position: relative; /*为弹出层提供定位上下文*/
+    float: left; /*让图片并排显示*/
+    .img-wrapper {
+        width: 80px; /*图片盒子宽度*/
+        height: 80px; /*图片盒子高度*/
+        margin: 20px 20px; /*图片盒子间距*/
+        border: 1px solid #666; /*图片边框*/
+        overflow: hidden;
+    }
+
+    figcaption {
+        display: none; /*隐藏弹出层*/
+        position: absolute; /*相对于容器（图片）定位*/
+        left: 90%;
+        top: 14px; /*把弹出层放到图片右侧*/
+        width: 140px; /*弹出层宽度*/
+        padding: 10px; /*弹出层内边距*/
+        background: #f2eaea;
+        border: 3px solid #f00;
+        border-radius: 6px;
+        &:after {
+            content: ' ';
+            display: block;
+            border: 12px solid;
+            border-color: transparent #f00 transparent transparent;
+            position: absolute;
+            top: 15px;
+            left: -25px;
+            height: 0;
+            width: 0;
+        }
+        h3 {
+            /*弹出层的内容*/
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 6px;
+        }
+        a {
+            /*弹出层的内容*/
+            display: block;
+            text-decoration: none;
+            font-size: 12px;
+            color: #000;
+        }
+    }
+    &:hover > figcaption {
+        display: block;
+        z-index: 2;
+    }
+
+}
+
+img {
+    display: block;
+}
+
+/*去掉图片下方的基线空白*/
+
+.border1 {
+    border: 12px solid #f00;
+    margin: 12px;
+    height: 20px;
+    width: 20px;
+}
+
+.border2 {
+    border: 12px solid;
+    border-color: #f00 #dd0 #00f #0c0;
+    margin: 12px;
+    height: 20px;
+    width: 20px;
+}
+
+.border3 {
+    margin: 12px;
+    height: 0px;
+    width: 0px;
+    border: 12px solid;
+    border-color: #f00 #dd0 #00f #0c0;
+}
+
+.border4 {
+    height: 0px;
+    width: 0px;
+    border: 12px solid;
+    border-color: transparent #f00 transparent transparent;
+}
