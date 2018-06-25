@@ -73,12 +73,24 @@ img {
     width: 20px;
 }
 
+@keyframes loading {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
 .border2 {
     border: 12px solid;
     border-color: #f00 #dd0 #00f #0c0;
     margin: 12px;
     height: 20px;
     width: 20px;
+    animation: loading 1s infinite linear;
+    .box-radius(32px);
+
 }
 
 .border3 {

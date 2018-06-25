@@ -8,3 +8,8 @@
 node_modules
 *.iml
 *.swp
+*.class
+*.o
+*.out
+*.a
+*build*
